@@ -1,1 +1,5 @@
-export default class Scenery {}
+export default class Scenery {
+  init() {
+    console.log(this);
+  }
+}
