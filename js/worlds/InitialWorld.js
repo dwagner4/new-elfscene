@@ -3,7 +3,6 @@ import * as THREE from 'three';
 import World from '../systems/World.js';
 import { createCubeTextureLoader } from '../systems/Loader.js';
 
-// import HeartScenery from '../scenery/HeartScenery.js';
 import Heart from '../actors/Heart.js';
 import MySphere from '../props/MySphere.js';
 import ElfScene from '../scenery/ElfScene.js';
@@ -18,7 +17,6 @@ export default class InitialWorld extends World {
     this.environmentMap = {};
     this.environmentMap.intensity = 0.25;
     const cubetextureloader = createCubeTextureLoader();
-    // this.environmentMap.texture = cubeTextureLoader.load(
     this.environmentMap.texture = cubetextureloader.load([
       'assets/skybox/desertdawn_rt.jpg',
       'assets/skybox/desertdawn_lf.jpg',
@@ -43,9 +41,6 @@ export default class InitialWorld extends World {
       });
     };
     this.environmentMap.updateMaterials();
-
-    // const hrtBgrd = new HeartScenery();
-    // this.stage.scene.add(hrtBgrd.hemilight, hrtBgrd.light, hrtBgrd.plane);
   }
 
   async init() {
